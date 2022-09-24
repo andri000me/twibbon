@@ -113,7 +113,7 @@
   background: #EFF3F7;
   position: relative;
   height: 45px;
-  width: 300px;
+  width: 100%;
   display: flex;
   align-items: center;
   border-radius: 6px;
