@@ -53,7 +53,7 @@ const externalHTML = `
 <hr class=hr-list style=padding:0;margin:0>
 <p></p>
 <p style=padding:0;margin:0>
-Made with love and <a href=https://www.facebook.com/bungferry.wa><b>Ferry Ayunda</b></a>
+© 2022 <a href=https://www.facebook.com/bungferry.wa><b>Ferry Ayunda</b></a>
 </p>
 </div>
 </main>
