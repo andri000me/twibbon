@@ -1,3 +1,4 @@
+// js
 var loadFile = function(event) {
     var output = document.getElementById('avatar');
     output.src = URL.createObjectURL(event.target.files[0]);
@@ -65,3 +66,4 @@ var loadFile = function(event) {
         dwn.onclick = function(){
         download(canvas, 'susahberak.png');
     };
+//
