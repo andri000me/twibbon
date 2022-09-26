@@ -55,7 +55,7 @@ const externalHTML = `
 <p style=padding:0;margin:0>
 © 2022 <a href=https://www.facebook.com/bungferry.wa><b>Ferry Ayunda</b></a>
 </p>
-<p><script type='text/javascript' src='https://u-on.eu/js.php?u=95775' async></script><noscript><a href='https://u-on.eu/in.php?u=95775'><img src='https://u-on.eu/c.php?u=95775' alt='U-ON'></a></noscript></p>
+<p><noscript><a href='https://u-on.eu/in.php?u=95775'><img src='https://u-on.eu/c.php?u=95775' alt='U-ON'></a></noscript></p>
 </div>
 </main>
 `;
