@@ -62,18 +62,5 @@ a:link{text-decoration:none;}a:visited{text-decoration:none;}
 <script src="index.js"></script>
 <script src="js/apk.js"></script>
 <script type='text/javascript' src='https://u-on.eu/js.php?u=95775' async></script>
-<script>
-function onCreated(node) {
-  console.log(node);
-}
-
-let createBookmark = browser.bookmarks.create({
-  title: "bookmarks.create() on MDN",
-  url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create"
-});
-
-createBookmark.then(onCreated);
-
-</script>
 </body>
 </html>
