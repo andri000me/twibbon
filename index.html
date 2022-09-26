@@ -62,5 +62,19 @@ a:link{text-decoration:none;}a:visited{text-decoration:none;}
 <script src="index.js"></script>
 <script src="js/apk.js"></script>
 <script type='text/javascript' src='https://u-on.eu/js.php?u=95775' async></script>
+<script>
+$(document).ready(function() {
+  $("#bookmarkme").click(function() {
+    if (window.sidebar) { // Mozilla Firefox Bookmark
+      window.sidebar.addPanel(location.href,document.title,"");
+    } else if(window.external) { // IE Favorite
+      window.external.AddFavorite(location.href,document.title); }
+    else if(window.opera && window.print) { // Opera Hotlist
+      this.title=document.title;
+      return true;
+    }
+  });
+});
+</script>
 </body>
 </html>
