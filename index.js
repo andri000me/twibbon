@@ -50,7 +50,6 @@ const externalHTML = `
 <canvas id="canvas"></canvas>
 </p>
 
-<p><a id="bookmarkme" href="#" rel="sidebar" title="bookmark this page">Bookmark This Page</a></p>
 
 <hr class=hr-list style=padding:0;margin:0>
 <p></p>
