@@ -10,7 +10,7 @@ const externalHTML = `
 
 <ul style=padding:0;margin:0>
 <li>
-<a href=./projects>Projects</a>
+<a href=./instal>Instal</a>
 </li>
 <li>
 <a href=./tutorial>Tutorial</a>
