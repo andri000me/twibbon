@@ -5,7 +5,7 @@ const externalHTML = `
 <div class=content>
 <header>
 <p style=padding:0;margin:0>
-<a href=.><b>SusahBerak</b></a>
+<a href=.><b>Twibbon App</b></a>
 </p>
 
 <ul style=padding:0;margin:0>
