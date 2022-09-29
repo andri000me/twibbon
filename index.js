@@ -44,13 +44,6 @@ const externalHTML = `
 <!--<button class="button-3" role="button" id="btndownload">UNDUH!</button>-->
 </p>
 
-<!--
-<img id="avatar" style="display: none" src="img/placeholder.jpg"/>
-<img id="bingkai" style="display: none" src="img/twibbon.png"/>
-<canvas id="canvas"></canvas>
--->
-
-
 <hr class=hr-list style=padding:0;margin:0>
 <p></p>
 <p style=padding:0;margin:0>
@@ -69,8 +62,8 @@ const externalHTML = `
 <!-- Contetn here -->
 <h2>Well Done! </h2>
 <p>
-<img id="avatar" style="display: none" src="img/laceholder.jpg"/>
-<img id="bingkai" style="display: none" src="img/twibbon.jpg"/>
+<img id="avatar" style="display: none" src="img/placeholder.jpg"/>
+<img id="bingkai" style="display: none" src="img/twibbon.png"/>
 <canvas id="canvas"></canvas>
 </p>
 
