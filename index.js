@@ -41,14 +41,14 @@ const externalHTML = `
 
 <p>
 <button class="button-4" role="button" onclick="gen()">SUBMIT!</button>
-<button class="button-3" role="button" id="btndownload">UNDUH!</button>
+<!--<button class="button-3" role="button" id="btndownload">UNDUH!</button>-->
 </p>
 
-<p>
+<!--
 <img id="avatar" style="display: none" src="img/placeholder.jpg"/>
 <img id="bingkai" style="display: none" src="img/twibbon.png"/>
 <canvas id="canvas"></canvas>
-</p>
+-->
 
 
 <hr class=hr-list style=padding:0;margin:0>
@@ -58,6 +58,32 @@ const externalHTML = `
 <br>
 <a href='https://u-on.eu/in.php?u=95775'><img src='https://u-on.eu/c.php?u=95775' alt='U-ON'></a>
 </p>
+
+<!-- Result -->
+<div id="custom-modal" class="custom-modal">
+<div class="custom-modal-dialog">
+<div class="custom-modal-content">
+<span class="close-modal">X</span>
+<div class="custom-modal-body">
+<div class="custom-modal-inner">
+<!-- Contetn here -->
+<h2>Well Done! </h2>
+<p>
+<img id="avatar" style="display: none" src="/preview.jpg"/>
+<img id="bingkai" style="display: none" src="/preview.jpg"/>
+<canvas id="canvas"></canvas>
+</p>
+
+<p>
+<button class="button-3" role="button" id="btndownload">UNDUH!</button>
+<button class="button-4" id="cancel" onclick="location.reload()" role="button" style="color:red;">HAPUS!</button>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </main>
 `;
