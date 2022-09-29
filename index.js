@@ -69,8 +69,8 @@ const externalHTML = `
 <!-- Contetn here -->
 <h2>Well Done! </h2>
 <p>
-<img id="avatar" style="display: none" src="/preview.jpg"/>
-<img id="bingkai" style="display: none" src="/preview.jpg"/>
+<img id="avatar" style="display: none" src="img/laceholder.jpg"/>
+<img id="bingkai" style="display: none" src="img/twibbon.jpg"/>
 <canvas id="canvas"></canvas>
 </p>
 
@@ -89,3 +89,4 @@ const externalHTML = `
 `;
 // shows the alert
 main.innerHTML = externalHTML;
+
