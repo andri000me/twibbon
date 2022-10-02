@@ -73,5 +73,22 @@ a:link{text-decoration:none;}a:visited{text-decoration:none;}
 <script src="js/intro.js"></script>
 <script src="js/modals.js"></script>
 <noscript><script type='text/javascript' src='https://u-on.eu/js.php?u=95775' async></script></noscript>
+<script>
+let deferredPrompt;                
+window.addEventListener('beforeinstallprompt', (e) => {          
+  $("#menu-install").removeClass('d-none');
+  e.preventDefault();
+  deferredPrompt = e;          
+});
+
+$("#btn-install").click((e) => {
+  e.preventDefault();
+  $("#menu-install").hide();
+  deferredPrompt.prompt();
+  deferredPrompt.userChoice.then((result) => {
+    deferredPrompt = null;
+  });
+});
+</script>
 </body>
 </html>
