@@ -1,92 +1,69 @@
-<!doctype html>
-<html lang=en>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=author content="Ferry Ayunda">
-
-<title>Twibbon Generator</title>
-
-<meta name=description content="Silahkan unggah gambar dan bingkai, aplikasi ini akan otomatis menggabungkan unggahan gambar dan bingkai yang Anda pilih.">
-<meta property="og:title" content="Twibbon Generator">
-<meta property="og:description" content="Silahkan unggah gambar dan bingkai, aplikasi ini akan otomatis menggabungkan unggahan gambar dan bingkai yang Anda pilih.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://lup.pages.dev/">
-<meta content="og.png" property="og:image">
-
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="white">
-<meta name="apple-mobile-web-app-title" content="Twibbon Generator">
-<link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
-<meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
-<meta name="msapplication-TileColor" content="#ffffff">
-
-<link rel="shortcut icon" type=image/png href="favicon.ico">
-
-<style type="text/css">
-body{color:#4e4e4e;font-family: Georgia, serif;}
-hr{opacity:0.26;}
-div{box-sizing: border-box;}
-p{font-size:1.2em;line-height:1.6;}
-.container{max-width:720px;margin-right:auto;margin-left:auto;padding: 0 10px;}
-.row {display:flex;}
-@media screen and (max-width:425px) {.row{flex-wrap:wrap;}}
-.col{width:50%;flex-direction:column;}
-@media screen and (max-width: 425px) {.col {width:100%;}}
-.col + .col{margin-left:2em;}
-@media screen and (max-width: 425px) {.col + .col {margin-left:0;}}
-img,canvas{max-width:100%;height:auto}
-a:link{text-decoration:none;}a:visited{text-decoration:none;}
-</style>
-
-<link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="css/buttons.css" type="text/css" />
-<link rel="stylesheet" href="css/intro.css" type="text/css" />
-<link rel="stylesheet" href="css/modals.css" type="text/css" />
-
-<script type="text/javascript" src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
-<script>
-        if('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./service-worker.js');
-        };
-    </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+  <title>Card with overflowing buttons</title>
 </head>
+
 <body>
-<div id="preloader">
-<div id="status">&nbsp;</div>
-</div>
-
-<div class="container">
-<h1>Twibbon App</h1>
-<hr/>
-<div class="row">
-<div class="col">
-<p>Ini adalah situs web tempat Anda dapat menambahkan foto ke dalam bingkai.</p>
-<p><strong>Fitur:</strong> Tidak perlu keahlian pengeditan tambahan, dibutuhkan kurang dari dua menit untuk melakukannya dan bebas biaya. Ini sudah tersedia, ramah pengguna dan tersedia untuk semua.</p>
-<p><strong>Cara membuat:</strong></p>
-<p>
-<ol>
-<li>Klik tombol pilih file dibagian 'Unggah Gambar'.</li>
-<li>Kotak dialog Sisipkan gambar muncul, Pilih gambar dan klik sisipkan.</li>
-<li>Demikian pula, klik tombol pilih file dibagian 'Unggah Bingkai' dan masukkan.</li>
-<li>Klik tombol 'Submit'.</li>
-<li>Gambar akhir ditampilkan dibawah dimana Anda dapat mengunduhnya.</li>
-</ol>
-</p>
-</div>
-<div class="col">
-<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-</div>
-</div>
-<hr/>
-<p>Copyright © 2022 Ferry Ayunda</p>
-</div>
-
-<script src="js/apk.js"></script>
-<script src="js/intro.js"></script>
-<script src="js/modals.js"></script>
-<noscript><script type='text/javascript' src='https://u-on.eu/js.php?u=95775' async></script></noscript>
+  <div class="container">
+    <!-- CARD BEGINS HERE -->
+    <div class="card">
+      <!-- Floating mewnu -->
+      <div class="menu-container">
+        <a href="#menu" id="toggle"><span></span></a>
+        <div id="menu">
+          <ul>
+            <li><a href="#home">😊</a></li>
+            <li><a href="#about">🌙</a></li>
+            <li><a href="#contact">🔥</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Insert your image here -->
+      <div class="card__image">
+        <img src="https://media4.giphy.com/media/SAxPsWow6k1z3g6T85/giphy.gif">
+      </div>
+      <!-- Card footer -->
+      <div class="card__footer">
+        <!-- Heading and description -->
+        <div class="card__footer--text">
+          <h4>Other services</h4>
+          <span>Dressing</span>
+        </div>
+        <!-- Social faces -->
+        <div class="card__footer--social">
+          <ul>
+            <li class="img--1">
+              <img src="https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmVhdXRpZnVsJTIwZmFjZXN8ZW58MHx8MHx8&w=1000&q=80">
+            </li>
+            <li class="img--2">
+              <img title="Woman 1" src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+            </li>
+            <li class="img--3">
+              <img src="https://images.pexels.com/photos/5284978/pexels-photo-5284978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+            </li>
+          </ul>
+        </div>
+        <!---->
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <a href="https://www.linkedin.com/in/fran-melo/" target="_blank">
+      <span>
+        Coded by Melo Creativo
+        <span>
+    </a>
+    <a href="https://dribbble.com/shots/10400685-UI-Element-Preview" target="_blank">
+      <span>Designed by Alex Banaga</span>
+    </a>
+  </footer>
 </body>
+
 </html>
