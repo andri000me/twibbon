@@ -7,6 +7,216 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
   <title>Card with overflowing buttons</title>
+  <style>
+:root {
+	 --clr-white: #fff;
+	 --clr-blue: #2660a4;
+	 --clr-orange: #fa9934;
+}
+ * {
+	 font-family: "Noto Sans", sans-serif;
+}
+ body {
+	 padding: 50px 0;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 flex-direction: column;
+	 height: 100vh;
+	 margin: 60px 0px;
+}
+ .container {
+	 width: 100%;
+}
+ .card {
+	 display: flex;
+	 max-width: 400px;
+	 max-height: 100vh;
+	 flex-direction: column;
+	 background: white;
+	 border-radius: 20px;
+	 position: relative;
+	 margin: 0 auto;
+	 -webkit-box-shadow: 0px 21px 37px 6px rgba(0, 0, 0, 0.3);
+	 box-shadow: 0px 21px 37px 6px rgba(0, 0, 0, 0.3);
+}
+ .card__image {
+	 margin: 20px 20px 0px 20px;
+	 border-radius: 10px;
+	 margin-bottom: 10px;
+	 overflow: hidden;
+	 object-fit: cover;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ .card__footer {
+	 display: flex;
+	 align-items: center;
+	 justify-content: space-between;
+	 padding: 20px;
+}
+ .card__footer--text h4 {
+	 font-size: clamp(20px, 3vw, 25px);
+	 margin: 0px 0px 10px 0px;
+	 color: var(--clr-orange);
+}
+ .card__footer--text span {
+	 font-size: clamp(15px, 3vw, 18px);
+	 color: #b0b0b0;
+}
+ .card__footer--social ul {
+	 list-style: none;
+	 padding: 0px;
+	 display: flex;
+	 position: relative;
+	 top: 10px;
+}
+ .card__footer--social ul img {
+	 border: 5px solid white;
+}
+ .card__footer--social ul .img--1 {
+	 z-index: 3;
+}
+ .card__footer--social ul .img--2 {
+	 position: absolute;
+	 top: -35%;
+	 left: 25%;
+	 z-index: 2;
+}
+ .card__footer--social ul img {
+	 width: 60px;
+	 height: 60px;
+	 border-radius: 50%;
+	 object-fit: cover;
+}
+/* Important styles */
+ #toggle {
+	 display: block;
+	 width: 28px;
+	 height: 30px;
+	 margin: 30px auto 10px;
+}
+ #toggle span:after, #toggle span:before {
+	 content: "";
+	 position: absolute;
+	 left: 0;
+	 top: -9px;
+}
+ #toggle span:after {
+	 top: 9px;
+}
+ #toggle span {
+	 position: relative;
+	 display: block;
+}
+ #toggle span, #toggle span:after, #toggle span:before {
+	 width: 100%;
+	 height: 5px;
+	 background-color: white;
+	 transition: all 0.3s;
+	 backface-visibility: hidden;
+	 border-radius: 2px;
+}
+/* on activation */
+ #toggle.on span {
+	 background-color: transparent;
+}
+ #toggle.on span:before {
+	 transform: rotate(45deg) translate(5px, 5px);
+}
+ #toggle.on span:after {
+	 transform: rotate(-45deg) translate(7px, -8px);
+}
+ #toggle.on + #menu {
+	 opacity: 1;
+	 visibility: visible;
+}
+/* Menu appearance */
+ .menu-container {
+	 position: absolute;
+	 right: 0rem;
+	 top: 0rem;
+	 padding: 0px 20px;
+	 background: var(--clr-orange);
+	 border-radius: 10px;
+	 -webkit-box-shadow: 14px 19px 31px 5px rgba(0, 0, 0, 0.39);
+	 box-shadow: 14px 19px 31px 5px rgba(0, 0, 0, 0.39);
+	 transition: all 0.3s ease-in-out;
+}
+ .menu-container:hover {
+	 transform: translate(-1rem, 1rem);
+	 cursor: pointer;
+	 background: white;
+}
+ .menu-container:hover #toggle span, .menu-container:hover #toggle span:after, .menu-container:hover #toggle span:before {
+	 background: var(--clr-orange);
+}
+ .menu-container:hover #toggle.on span {
+	 background-color: transparent;
+}
+ #menu {
+	 position: absolute;
+	 top: 5em;
+	 right: 0px;
+	 width: 48px;
+	 color: #999;
+	 padding: 10px;
+	 margin: auto;
+	 text-align: center;
+	 border-radius: 10px;
+	 background: white;
+	 -webkit-box-shadow: 14px 19px 31px 5px rgba(0, 0, 0, 0.39);
+	 box-shadow: 14px 19px 31px 5px rgba(0, 0, 0, 0.39);
+	/* just for this demo */
+	 opacity: 0;
+	 transition: opacity 0.4s;
+	 z-index: 1000;
+}
+ ul, li, li a {
+	 list-style: none;
+	 display: block;
+	 margin: 0;
+	 padding: 0;
+}
+ li a {
+	 padding: 5px;
+	 color: #888;
+	 font-size: 30px;
+	 text-decoration: none;
+	 transition: all 0.2s;
+}
+ li a:hover, li a:focus {
+	 background: var(--clr-orange);
+	 color: #fff;
+	 border-radius: 10px;
+}
+/* Footer */
+ footer {
+	 display: flex;
+	 justify-content: center;
+	 flex-wrap: wrap;
+	 margin-top: 4em;
+	 gap: 1em;
+}
+ footer a {
+	 font-size: clamp(12px, 1vw, 14px);
+	 font-weight: 600;
+	 letter-spacing: 0.8px;
+	 padding: 15px 20px;
+	 border-radius: 25px;
+	 box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+	 background-color: rgba(255, 255, 255, 0.15);
+	 backdrop-filter: blur(5px);
+	 text-decoration: none;
+	 transition: all ease-in-out 0.3s;
+}
+ footer a:hover {
+	 color: var(--clr-white);
+	 background-color: var(--clr-blue);
+}
+ 
+  </style>
 </head>
 
 <body>
